@@ -1,5 +1,6 @@
 # sns_ses
-Amazon SQS (Message Queuing Service) golang convert and parse to json structs of notification-contents of the Amazon SNS message of the Amazon SES service (Amazon Simple Email Service) (https://docs.aws.amazon.com/ses/latest/DeveloperGuide/notification-contents.html#top-level-json-object)
+Amazon SQS (Message Queuing Service) golang convert and parse to json structs of notification-contents of the Amazon SNS message of the Amazon SES service (Amazon Simple Email Service)
+[amazon/notification-contents.html](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/notification-contents.html#top-level-json-object)
 
 # Bindings for
 - Received Mail
@@ -35,3 +36,6 @@ func handlePubSubMailMessage(ctx context.Context, msg *sqs.Message) error {
 	}
 }
 ```
+
+## Extra
+If you want to strip signature and quoted-replies from the received message you could use another library we made: [web-ridge/email-reply-parser](https://github.com/web-ridge/email-reply-parser)
